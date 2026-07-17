@@ -1,0 +1,58 @@
+backend:
+  name: github
+  repo: Bahuncoder/DharmaMind
+  branch: main
+  base_url: https://decap-oauth-proxy.YOUR-SUBDOMAIN.workers.dev
+  auth_endpoint: auth
+
+site_url: https://dharmamind.com
+display_url: https://dharmamind.com
+logo_url: /logo.svg
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "home"
+    label: "Homepage"
+    files:
+      - file: "_data/home.json"
+        label: "Homepage Content"
+        name: "home"
+        fields:
+          - { label: "Browser Tab Title", name: "meta_title", widget: "string" }
+          - { label: "Meta Description (SEO)", name: "meta_description", widget: "text" }
+          - { label: "Hero Headline", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "\"Why\" Section Label", name: "why_label", widget: "string" }
+          - { label: "\"Why\" Section Title", name: "why_title", widget: "string" }
+          - { label: "\"Why\" Section Body", name: "why_body", widget: "text" }
+          - label: "Three Pillars"
+            name: "pillars"
+            widget: "list"
+            fields:
+              - { label: "Glyph (small symbol)", name: "glyph", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - { label: "Ecosystem Section Label", name: "ecosystem_label", widget: "string" }
+          - { label: "Ecosystem Section Title", name: "ecosystem_title", widget: "string" }
+          - label: "Ecosystem Cards"
+            name: "ecosystem"
+            widget: "list"
+            fields:
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Link Text", name: "link_text", widget: "string" }
+              - { label: "Link URL", name: "link_url", widget: "string" }
+          - label: "Dharmic Intelligence Teaser"
+            name: "di_teaser"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Button Text", name: "cta_text", widget: "string" }
+              - { label: "Button URL", name: "cta_url", widget: "string" }
+          - { label: "Footer Tagline", name: "footer_tagline", widget: "string" }
+          - { label: "Footer Copyright Line", name: "footer_bottom", widget: "string" }

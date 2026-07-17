@@ -1,0 +1,298 @@
+---
+permalink: /index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ home.meta_title }}</title>
+<meta name="description" content="{{ home.meta_description }}">
+<link rel="canonical" href="https://dharmamind.com/">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DharmaMind">
+<meta property="og:url" content="https://dharmamind.com/">
+<meta property="og:title" content="{{ home.meta_title }}">
+<meta property="og:description" content="{{ home.meta_description }}">
+<meta property="og:image" content="https://dharmamind.com/logo.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ home.meta_title }}">
+<meta name="twitter:description" content="{{ home.meta_description }}">
+<meta name="twitter:image" content="https://dharmamind.com/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  @font-face {
+    font-family: 'Newsreader';
+    src: url('/fonts/newsreader-latin.woff2') format('woff2');
+    font-weight: 400 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Newsreader';
+    src: url('/fonts/newsreader-latin-italic.woff2') format('woff2');
+    font-weight: 400 600;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  :root {
+    --brand-primary: #C8822A;
+    --brand-primary-hover: #a86b1d;
+    --brand-secondary: #d4a854;
+    --saffron-light: #ffb960;
+    --cosmos: #1a1b41;
+    --sand: #fdf9f0;
+    --sand-100: #f7f3ea;
+    --sand-200: #f1eee5;
+    --neutral-300: #d6d3d1;
+    --neutral-500: #78716c;
+    --neutral-700: #44403c;
+    --text-primary: #2A251D;
+    --text-secondary: #514537;
+    --text-muted: #6B6B6B;
+    --border-default: #EDE6D6;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --sand: #1c1917;
+      --sand-100: #221e1a;
+      --sand-200: #292524;
+      --text-primary: #f5f2ea;
+      --text-secondary: #d6d3d1;
+      --text-muted: #a8a29e;
+      --border-default: #3a352c;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--sand);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 500; line-height: 1.2; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Nav */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--sand) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-default);
+  }
+  nav.wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 1.1rem; padding-bottom: 1.1rem;
+  }
+  .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 1.05rem; }
+  .brand img { width: 28px; height: 28px; }
+  .nav-links { display: flex; align-items: center; gap: 1.75rem; font-size: 0.92rem; color: var(--text-secondary); }
+  .nav-links a:hover { color: var(--brand-primary); }
+  .nav-cta {
+    background: var(--brand-primary); color: #fff !important; padding: 0.55rem 1.15rem;
+    border-radius: var(--radius-lg); font-weight: 500; font-size: 0.88rem;
+    transition: background 0.15s ease;
+  }
+  .nav-cta:hover { background: var(--brand-primary-hover); }
+
+  /* Hero */
+  .hero { padding: 5.5rem 0 4.5rem; text-align: center; }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    max-width: 780px; margin: 0 auto 1.3rem;
+    letter-spacing: -0.01em;
+  }
+  .hero p.sub {
+    font-size: 1.15rem; color: var(--text-secondary);
+    max-width: 620px; margin: 0 auto 2.3rem;
+  }
+  .hero-ctas { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.85rem 1.6rem; border-radius: var(--radius-lg);
+    font-weight: 500; font-size: 0.98rem; transition: all 0.15s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--brand-primary); color: #fff; }
+  .btn-primary:hover { background: var(--brand-primary-hover); }
+  .btn-secondary { background: transparent; color: var(--text-primary); border-color: var(--border-default); }
+  .btn-secondary:hover { border-color: var(--brand-primary); color: var(--brand-primary); }
+
+  /* Sections */
+  section { padding: 4rem 0; }
+  .section-label {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--brand-primary); margin-bottom: 0.75rem; display: block; text-align: center;
+  }
+  .section-title { font-size: clamp(1.6rem, 3vw, 2.1rem); text-align: center; max-width: 620px; margin: 0 auto 1rem; }
+  .section-sub { text-align: center; color: var(--text-muted); max-width: 560px; margin: 0 auto 3rem; font-size: 1.02rem; }
+
+  /* Pillars */
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .pillar {
+    background: var(--sand-100); border: 1px solid var(--border-default);
+    border-radius: var(--radius-2xl); padding: 2rem 1.6rem;
+  }
+  .pillar .glyph {
+    width: 40px; height: 40px; border-radius: var(--radius-lg);
+    background: rgba(200,130,42,0.12); color: var(--brand-primary);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; margin-bottom: 1.1rem;
+  }
+  .pillar h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+  .pillar p { color: var(--text-muted); font-size: 0.95rem; }
+
+  /* Ecosystem */
+  .ecosystem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .eco-card {
+    background: var(--sand); border: 1px solid var(--border-default);
+    border-radius: var(--radius-2xl); padding: 2rem 1.6rem;
+    display: flex; flex-direction: column;
+  }
+  .eco-card .tag {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--brand-secondary); margin-bottom: 0.8rem;
+  }
+  .eco-card h3 { font-size: 1.25rem; margin-bottom: 0.7rem; }
+  .eco-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.4rem; flex-grow: 1; }
+  .eco-card .link { font-size: 0.9rem; font-weight: 600; color: var(--brand-primary); }
+  .eco-card .link:hover { text-decoration: underline; }
+
+  /* DI teaser */
+  .di-teaser {
+    background: var(--cosmos); color: #e8e6f2; border-radius: var(--radius-2xl);
+    padding: 3rem 2.5rem; text-align: center;
+  }
+  .di-teaser .section-label { color: var(--brand-secondary); }
+  .di-teaser h2 { color: #fff; }
+  .di-teaser p { color: #c8c6d8; max-width: 600px; margin: 0 auto 1.8rem; font-size: 1.02rem; }
+  .di-teaser .btn-primary { background: var(--brand-secondary); color: #1a1b41; }
+  .di-teaser .btn-primary:hover { background: #e4c078; }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--border-default); padding: 3rem 0 2.5rem; }
+  .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+  .footer-brand { max-width: 280px; }
+  .footer-brand .brand { margin-bottom: 0.8rem; }
+  .footer-brand p { color: var(--text-muted); font-size: 0.9rem; }
+  .footer-cols { display: flex; gap: 3.5rem; }
+  .footer-col h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.9rem; }
+  .footer-col a { display: block; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.6rem; }
+  .footer-col a:hover { color: var(--brand-primary); }
+  .footer-bottom { border-top: 1px solid var(--border-default); padding-top: 1.5rem; font-size: 0.82rem; color: var(--text-muted); text-align: center; }
+
+  @media (max-width: 780px) {
+    .nav-links { display: none; }
+    .pillars, .ecosystem-grid { grid-template-columns: 1fr; }
+    .footer-grid { flex-direction: column; }
+    .footer-cols { gap: 2rem; flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand"><img src="/logo.svg" alt="DharmaMind"> DharmaMind</div>
+    <div class="nav-links">
+      <a href="https://dharmamind.ai">DharmaMind AI</a>
+      <a href="https://dharmamind.org">Research</a>
+      <a href="#dharmic-intelligence">Dharmic Intelligence</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="https://dharmamind.ai" class="nav-cta">Explore DharmaMind AI</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <h1>{{ home.hero_title }}</h1>
+    <p class="sub">{{ home.hero_subtitle }}</p>
+    <div class="hero-ctas">
+      <a href="https://dharmamind.ai" class="btn btn-primary">Explore DharmaMind AI</a>
+      <a href="https://dharmamind.org" class="btn btn-secondary">Discover Our Research</a>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="section-label">{{ home.why_label }}</span>
+    <h2 class="section-title">{{ home.why_title }}</h2>
+    <p class="section-sub">{{ home.why_body }}</p>
+    <div class="pillars">
+      {% for pillar in home.pillars %}
+      <div class="pillar">
+        <div class="glyph">{{ pillar.glyph }}</div>
+        <h3>{{ pillar.title }}</h3>
+        <p>{{ pillar.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="section-label">{{ home.ecosystem_label }}</span>
+    <h2 class="section-title">{{ home.ecosystem_title }}</h2>
+    <div class="ecosystem-grid">
+      {% for card in home.ecosystem %}
+      <div class="eco-card">
+        <span class="tag">{{ card.tag }}</span>
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.body }}</p>
+        <a href="{{ card.link_url }}" class="link">{{ card.link_text }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="wrap" id="dharmic-intelligence">
+    <div class="di-teaser">
+      <span class="section-label">{{ home.di_teaser.label }}</span>
+      <h2>{{ home.di_teaser.title }}</h2>
+      <p>{{ home.di_teaser.body }}</p>
+      <a href="{{ home.di_teaser.cta_url }}" class="btn btn-primary">{{ home.di_teaser.cta_text }}</a>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand"><img src="/logo.svg" alt="DharmaMind"> DharmaMind</div>
+        <p>{{ home.footer_tagline }}</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="https://dharmamind.ai">DharmaMind AI</a>
+          <a href="https://dharmamind.org">DharmaMind Research</a>
+          <a href="#dharmic-intelligence">Dharmic Intelligence</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="mailto:hello@dharmamind.ai">Contact</a>
+          <a href="https://dharmamind.org/#principles">Research Principles</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">{{ home.footer_bottom }}</div>
+  </div>
+</footer>
+
+</body>
+</html>

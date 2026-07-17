@@ -1,0 +1,60 @@
+{
+  "meta_title": "DharmaMind — Building intelligence guided by wisdom",
+  "meta_description": "DharmaMind brings Sanatana Dharma and artificial intelligence together — dharmic guidance, ethical intelligence research, and technology built on the eternal wisdom tradition.",
+  "hero_title": "Building intelligence guided by wisdom.",
+  "hero_subtitle": "DharmaMind brings together Sanatana Dharma, ethical intelligence research, and artificial intelligence — technology rooted in a tradition, offered to anyone seeking clarity.",
+  "why_label": "Why DharmaMind",
+  "why_title": "Power without wisdom rarely leads to better decisions.",
+  "why_body": "Intelligence has grown faster than our capacity for discernment. DharmaMind draws on one of the world's oldest and deepest traditions of ethical reasoning — Sanatana Dharma — to build technology and research that help people act with clarity, not just speed.",
+  "pillars": [
+    {
+      "glyph": "॥",
+      "title": "Wisdom",
+      "body": "The Bhagavad Gita, the Upanishads, and the Yoga Sutras — living philosophical traditions exploring right action, self-knowledge, and responsibility."
+    },
+    {
+      "glyph": "✦",
+      "title": "Research",
+      "body": "Interdisciplinary inquiry into Dharmic Intelligence — a proposed framework for ethical discernment, contextual wisdom, and human flourishing."
+    },
+    {
+      "glyph": "◈",
+      "title": "Technology",
+      "body": "AI products designed to support reflection, right action, and wiser decisions — grounded in real scripture, not generic self-help."
+    }
+  ],
+  "ecosystem_label": "Ecosystem",
+  "ecosystem_title": "One mission, three parts.",
+  "ecosystem": [
+    {
+      "tag": "Product",
+      "title": "DharmaMind AI",
+      "body": "A guided AI experience for dharmic reflection, personal decisions, and daily practice — free to start, rooted in real scripture, never generic.",
+      "link_text": "Explore the product →",
+      "link_url": "https://dharmamind.ai"
+    },
+    {
+      "tag": "Research",
+      "title": "DharmaMind Research",
+      "body": "Original interdisciplinary research on Dharmic Intelligence — ethical discernment, contextual wisdom, and their application to human decision-making and AI.",
+      "link_text": "Read the research →",
+      "link_url": "https://dharmamind.org"
+    },
+    {
+      "tag": "Coming soon",
+      "title": "DharmaMind Community",
+      "body": "A future network of researchers, practitioners, and technologists building wisdom-centered work in the open.",
+      "link_text": "Get notified →",
+      "link_url": "#contact"
+    }
+  ],
+  "di_teaser": {
+    "label": "The Theory",
+    "title": "Dharmic Intelligence",
+    "body": "A proposed framework for understanding the capacity to discern and act on what is right — not merely what is clever or convenient — through self-awareness, ethical judgment, compassion, and contextual wisdom. Currently being developed through DharmaMind Research.",
+    "cta_text": "Read the Working Paper",
+    "cta_url": "https://dharmamind.org"
+  },
+  "footer_tagline": "Building intelligence guided by wisdom.",
+  "footer_bottom": "© 2026 DharmaMind. Proudly rooted in Sanatana Dharma, offered to every seeker."
+}
