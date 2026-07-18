@@ -55,6 +55,13 @@
     "cta_text": "Read the Working Paper",
     "cta_url": "https://dharmamind.org"
   },
+  "contact": {
+    "label": "Contact",
+    "title": "Speak with us.",
+    "body": "Questions about DharmaMind, the research, or working together — every message is read. Write to us and we will respond with care.",
+    "email": "hello@dharmamind.ai",
+    "cta_text": "Email hello@dharmamind.ai"
+  },
   "footer_tagline": "Building intelligence guided by wisdom.",
   "footer_bottom": "© 2026 DharmaMind. Proudly rooted in Sanatana Dharma, offered to every seeker."
 }

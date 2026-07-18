@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: Bahuncoder/DharmaMind
-  branch: main
+  repo: Bahuncoder/dharmamindv3
+  branch: master
   base_url: https://decap-oauth-proxy.YOUR-SUBDOMAIN.workers.dev
   auth_endpoint: auth
 
@@ -9,14 +9,14 @@ site_url: https://dharmamind.com
 display_url: https://dharmamind.com
 logo_url: /logo.svg
 
-media_folder: "uploads"
+media_folder: "dharmamind-com/uploads"
 public_folder: "/uploads"
 
 collections:
   - name: "home"
     label: "Homepage"
     files:
-      - file: "_data/home.json"
+      - file: "dharmamind-com/_data/home.json"
         label: "Homepage Content"
         name: "home"
         fields:
@@ -54,5 +54,14 @@ collections:
               - { label: "Body", name: "body", widget: "text" }
               - { label: "Button Text", name: "cta_text", widget: "string" }
               - { label: "Button URL", name: "cta_url", widget: "string" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Email Address", name: "email", widget: "string" }
+              - { label: "Button Text", name: "cta_text", widget: "string" }
           - { label: "Footer Tagline", name: "footer_tagline", widget: "string" }
           - { label: "Footer Copyright Line", name: "footer_bottom", widget: "string" }
